@@ -1,0 +1,20 @@
+  /* Tekstur garis kertas buku kas — sulit diekspresikan lewat utility Tailwind biasa */
+  body {
+    background-color: #edefe2;
+    background-image: repeating-linear-gradient(to bottom, transparent, transparent 33px, #c7c4ac 34px);
+  }
+  *:focus-visible {
+    outline: 2px solid #2f5233;
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+  ::-webkit-scrollbar { height: 8px; width: 8px; }
+  ::-webkit-scrollbar-thumb { background: #c7c4ac; border-radius: 6px; }
+
+  /* Supaya tabel bisa digeser mulus di HP (iOS Safari perlu ini eksplisit) */
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
